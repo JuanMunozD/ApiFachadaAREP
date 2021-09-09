@@ -8,7 +8,7 @@ nameButton.addEventListener('click', function () {
     if(numero==="" || operacion===""){
         alert("Please insert a name");
     } else {
-        axios.get("http://localhost:4444/"+operacion+"?value="+numero)
+        axios.get("https://calculadoraapiarepjuanmunoz.herokuapp.com/"+operacion+"?value="+numero)
             .then(res => {
                 console.log(res);
                 $("#hello").append(res.data.respuesta);
