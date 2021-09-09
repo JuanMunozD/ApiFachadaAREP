@@ -10,7 +10,8 @@ nameButton.addEventListener('click', function () {
     } else {
         axios.get("http://localhost:4444/"+operacion+"?value="+numero)
             .then(res => {
-                $("#hello").append(res);
+                console.log(res);
+                $("#hello").append(res.data.respuesta);
             }).catch(err => {
                 console.log(err);
         });
